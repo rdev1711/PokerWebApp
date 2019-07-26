@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poker Equity Calculator</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+<center>
+    <h1>
+        Select Cards:
+    </h1>
+    <form method="post" action="SelectCardRank">
+
+        <div class="row">
+            <div class="column">
+            Player 1 <br>
+            <br>Card1:<br>
+        <select name="p1c1r" size="1">
+            <option>A</option>
+            <option>K</option>
+            <option>Q</option>
+            <option>J</option>
+            <option>10</option>
+            <option>9</option>
+            <option>8</option>
+            <option>7</option>
+            <option>6</option>
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+        </select>
+            <select name="p1c1s" size="1">
+                <option>Hearts</option>
+                <option>Spades</option>
+                <option>Clubs</option>
+                <option>Diamonds</option>
+            </select>
+            <br> <br>Card2:<br>
+            <select name="p1c2r" size="1">
+                <option>A</option>
+                <option>K</option>
+                <option>Q</option>
+                <option>J</option>
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+            </select>
+            <select name="p1c2s" size="1">
+                <option>Hearts</option>
+                <option>Spades</option>
+                <option>Clubs</option>
+                <option>Diamonds</option>
+            </select>
+            </div>
+        <div class="column">
+            Player 2 <br>
+            <br>Card1:<br>
+            <select name="p2c1r" size="1">
+                <option>A</option>
+                <option>K</option>
+                <option>Q</option>
+                <option>J</option>
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+            </select>
+            <select name="p2c1s" size="1">
+                <option>Hearts</option>
+                <option>Spades</option>
+                <option>Clubs</option>
+                <option>Diamonds</option>
+            </select>
+            <br><br> Card2:<br>
+            <select name="p2c2r" size="1">
+                <option>A</option>
+                <option>K</option>
+                <option>Q</option>
+                <option>J</option>
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+            </select>
+            <select name="p2c2s" size="1">
+                <option>Hearts</option>
+                <option>Spades</option>
+                <option>Clubs</option>
+                <option>Diamonds</option>
+            </select>
+        </div>
+            <div class="column">
+
+            </div>
+        </div>
+        <br><br>
+        <input type="submit">
+    </form>
+</center>
+<script src="js/main.js"></script>
+</body>
+</html>
