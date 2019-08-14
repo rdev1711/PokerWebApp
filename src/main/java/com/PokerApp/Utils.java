@@ -16,13 +16,13 @@ class Utils {
 
 
 
-
-    private static int factorial(int n) {
-        if (n == 1 || n == 0) {
+    static long factorial(int n) {
+        if (n == 1) {
             return 1;
         }
         return n * factorial(n-1);
     }
+
 
      static void printList(int[] lst) {
         String lstString = "[";

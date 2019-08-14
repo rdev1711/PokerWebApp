@@ -50,27 +50,41 @@ public class UtilsTest {
     }
 
     public static void testCardCreate() {
-        Card c1 = new Card("A", "Hearts");
-        Card c2 = new Card("Q", "Diamonds");
+        //p1
+        Card c1 = new Card("2", "Hearts");
+        Card c2 = new Card("2", "Diamonds");
+        //p2
         Card c3 = new Card("10", "Hearts");
         Card c4 = new Card("10", "Clubs");
+        //p3
         Card c5 = new Card("Q", "Spades");
         Card c6 = new Card("7", "Diamonds");
-        Card c7 = new Card("9", "Spades");
+        //Table Cards
+        Card c7 = new Card("10", "Spades");
+        Card c8 = new Card("J", "Clubs");
+        Card c9 = new Card("Q", "Diamonds");
+        Card c10 = new Card("K", "Hearts");
+
         List<Card> player1 = new ArrayList<>(Arrays.asList(c1, c2));
         List<Card> player2 = new ArrayList<>(Arrays.asList(c3, c4));
         List<Card> player3 = new ArrayList<>(Arrays.asList(c5, c6));
-        List<Card> tableCards = new ArrayList<>();
-        List<List<Card>> players = new ArrayList<>(Arrays.asList(player1, player2));
+        List<Card> tableCards = new ArrayList<>(Arrays.asList(c7,c8,c9,c10));
+        List<List<Card>> players = new ArrayList<>(Arrays.asList(player2));
 
-        OddsGenerator oG = new OddsGenerator(players, tableCards);
-        for (Map.Entry<Integer, Double> e : oG.odds.entrySet()) {
-            String s = "Player " + e.getKey() + " odds: " + e.getValue();
+        Game g = new Game(2, players, tableCards);
+        for (Map.Entry<Integer, Double> e : g.odds.entrySet()) {
+            String s = "";
+            if (e.getKey() == 0) {
+                 s = "Tie odds: " + e.getValue();
+            } else {
+                 s = "Player " + e.getKey() + " odds: " + e.getValue();
+            }
             System.out.println(s);
         }
     }
 
     public static void main(String[] args) {
-        testCardCreate();
+        //System.out.println(Utils.factorial(44));
+       testCardCreate();
     }
 }

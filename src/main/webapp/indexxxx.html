@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Poker Equity Calculator</title>
+</head>
+<body>
+        <p> Number of Players <p>
+        <select id="numPlayers" onchange="displayPlayers()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+            <p id="result"></p>
+
+
+        <div id="player1">
+
+        </div>
+        <select id="card" style="display:none;" onchange="myFunction()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+<script>
+
+   function displayPlayers() {
+    var x = document.getElementById("numPlayers").value;
+    var i;
+    for (i = 1; i <=x; i++) {
+        var str = "result" + i;
+        var card = document.getElementById("card)
+        document.getElementById(str).append(card
+        }
+}
+</script>
+
+</body>
+</html>
